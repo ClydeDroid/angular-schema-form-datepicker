@@ -35,7 +35,8 @@ angular.module('schemaForm').directive('pickADate', function () {
         onClose: function () {
           element.blur();
         },
-        formatSubmit: null
+        formatSubmit: null,
+        container: '.modal'
       };
       if (scope.pickADate) {
         angular.extend(opts, scope.pickADate);

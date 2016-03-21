@@ -34,7 +34,8 @@ angular.module('schemaForm').directive('pickADate', function () {
         onClose: function () {
           element.blur();
         },
-        formatSubmit: null
+        formatSubmit: null,
+        container: '.modal'
       };
       if (scope.pickADate) {
         angular.extend(opts, scope.pickADate);
@@ -49,6 +50,8 @@ angular.module('schemaForm').directive('pickADate', function () {
       var viewFormat    = $.fn.pickadate.defaults.format;
 
       var picker = element.pickadate('picker');
+      
+      picker.set('select',)
 
       //The view value
       ngModel.$formatters.push(function(value) {
