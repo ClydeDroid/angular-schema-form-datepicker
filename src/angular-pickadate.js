@@ -37,7 +37,11 @@ angular.module('schemaForm').directive('pickADate', function() {
         formatSubmit: null,
         container: '.modal',
         selectYears: true,
-        selectMonths: true
+        selectMonths: true,
+        klass: {
+          selectMonth: 'picker-select-box-month',
+          selectYear: 'picker-select-box-year'
+        }
       };
       if (scope.pickADate) {
         angular.extend(opts, scope.pickADate);
